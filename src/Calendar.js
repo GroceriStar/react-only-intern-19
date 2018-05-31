@@ -55,15 +55,22 @@ class Calendar extends Component {
       dates: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     }
   ];
-  for (var key in Cal) {
+
+//For in Loop to Find Value
+  /*for (var key in Cal) {
   if(num == key)
   return [key, Cal.name, Cal.dates];
+  */
+
+// Object Properties
+for (let value of Object.values(Cal)) {
+  if(num == value) {
+  document.write(Object.entries(Cal)[num]);
 }
-  document.write([Cal.name, Cal.dates]);
+}
+document.write(Object.entries(Cal)[num]);
 }
 
-
-  onChange = date => this.setState({ date })
 
   render() {
     let dateObject = new Date();
