@@ -65,10 +65,12 @@ class Calendar extends Component {
 // Object Properties
 for (let value of Object.values(Cal)) {
   if(num == value) {
-  document.write(Object.entries(Cal)[num]);
+  //return(Object.entries(Cal)[num]);
+  document.write(Object.values(Cal));
+  //return(Object.values(Cal).toString());
 }
 }
-document.write(Object.entries(Cal)[num]);
+//document.write(Object.entries(Cal)[num]);
 }
 
 
@@ -80,7 +82,7 @@ document.write(Object.entries(Cal)[num]);
 
     return (
       <div>
-       <div> Today is {date} of {this.getCal(month)} </div>
+       <div> <br/> Today is {date} of the month {this.getCal(month)} </div>
       </div>
     );
   }
